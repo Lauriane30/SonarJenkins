@@ -1,20 +1,40 @@
 package com.example.demo;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@SpringBootApplication
-@RestController
 public class DemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
-
-	@RequestMapping("/")
-  public String home() {
-    return "Hello Docker World!";
-  }
+    private int x;
+    private int y;
+    public DemoApplication(int a, int b) {
+        x = a;
+        y = b;
+    }
+    public int ajouter() {
+        x += y;
+        return x;
+    }
+    
+    public int soustraire() {
+        x -= y;
+        return x;
+    }
+    
+    public int multiplier() {
+        x *= y;
+        return x;
+    }
+    
+    public int diviser() {
+        x /= y;
+        return x;
+    }
+    
+    @Override
+    public String toString() {
+        return "x = " + x + "; y = " + y;
+    }
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+    
 }
