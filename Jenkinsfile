@@ -7,7 +7,7 @@ pipeline {
     stage('Scan') {
       steps {
         withSonarQubeEnv(installationName: 'Sonar') {
-          sh 'C:\Users\VirtualMachine\Downloads\apache-maven-3.6.2\bin\mvn sonar:sonar'
+          sh 'C:/Users/VirtualMachine/Downloads/apache-maven-3.6.2/bin/mvn sonar:sonar'
         }
       }
     }
